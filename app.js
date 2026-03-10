@@ -1,17 +1,49 @@
-const releases=[{artist:"atrisk",title:"recursion"},{artist:"the pixels",title:"synthesis"}];
-const artists=[{name:"ATRISK",bio:"Algorithmic chaos and digital noise."},{name:"THE PIXELS",bio:"Synthetic melodies and machine pop."}];
-const posts=[{title:"ATRISK — Recursion",excerpt:"New generative systems release."},{title:"The Pixels — Synthesis",excerpt:"Exploring structured randomness."}];
+const artists=[
+{name:"ATRISK"},
+{name:"THE PIXELS"},
+{name:"Koding"},
+{name:"ZTh3T3ch"},
+{name:"Zilla"}
+];
 
-function renderGrid(data,id){
+const releases=[
+{title:"Recursion"},
+{title:"Synthesis"}
+];
+
+function render(list,id,key){
 const el=document.getElementById(id);
-data.forEach(d=>{
-const div=document.createElement("div");
-div.className="card";
-div.innerHTML=`<h3>${d.artist||d.name||d.title}</h3><p>${d.title||d.bio||d.excerpt}</p>`;
-el.appendChild(div);
+list.forEach(i=>{
+const d=document.createElement("div");
+d.className="card";
+d.innerHTML=`<h3>${i[key]||i.title}</h3>`;
+el.appendChild(d);
 });
 }
 
-renderGrid(releases,"releaseGrid");
-renderGrid(artists,"artistGrid");
-renderGrid(posts,"postsGrid");
+render(artists,"artistGrid","name");
+render(releases,"releaseGrid","title");
+
+fetch("https://freeaudiosounds.blogspot.com/feeds/posts/default?alt=json")
+.then(r=>r.json())
+.then(data=>{
+const posts=data.feed.entry.slice(0,6);
+const grid=document.getElementById("postsGrid");
+posts.forEach(p=>{
+const title=p.title.$t;
+const link=p.link.find(l=>l.rel==="alternate").href;
+const div=document.createElement("div");
+div.className="card";
+div.innerHTML=`<h3>${title}</h3><a href="${link}" target="_blank">Read</a>`;
+grid.appendChild(div);
+});
+});
+
+function openPlayer(url){
+document.getElementById("playerModal").style.display="flex";
+document.getElementById("spotifyFrame").src=url;
+}
+function closePlayer(){
+document.getElementById("playerModal").style.display="none";
+document.getElementById("spotifyFrame").src="";
+}
