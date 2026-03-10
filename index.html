@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generative Records</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap header-inner">
+    <div class="logo">
+      <img src="assets/logo.svg">
+      <div>
+        <h1>GENERATIVE RECORDS</h1>
+        <p>Sounds from the unknown</p>
+      </div>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#artists">Artists</a>
+      <a href="#releases">Releases</a>
+      <a href="#blog">Posts</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-card">
+    <img src="assets/atrisk.svg">
+    <div class="hero-text">
+      <h2>ATRISK</h2>
+      <p>New album — Recursion</p>
+      <a class="btn" href="#players">Listen</a>
+    </div>
+  </div>
+
+  <div class="hero-card">
+    <img src="assets/pixels.svg">
+    <div class="hero-text">
+      <h2>THE PIXELS</h2>
+      <p>EP — Synthesis</p>
+      <a class="btn" href="#players">Stream</a>
+    </div>
+  </div>
+</section>
+
+<section id="releases" class="wrap">
+<h2>Latest Releases</h2>
+<div id="releaseGrid" class="grid"></div>
+</section>
+
+<section id="artists" class="wrap">
+<h2>Artists</h2>
+<div id="artistGrid" class="grid"></div>
+</section>
+
+<section id="blog" class="wrap">
+<h2>Posts</h2>
+<div id="postsGrid" class="grid"></div>
+</section>
+
+<section id="players" class="wrap players">
+<h2>Players</h2>
+
+<iframe style="border-radius:12px"
+src="https://open.spotify.com/embed/album/4GzM8r8M8ExampleA"
+width="100%" height="152" frameborder="0"></iframe>
+
+<iframe style="border-radius:12px"
+src="https://open.spotify.com/embed/album/3PxL8s9R9ExampleB"
+width="100%" height="152" frameborder="0"></iframe>
+
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
