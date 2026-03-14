@@ -53,7 +53,7 @@ body.modal-open{overflow:hidden}a{color:inherit;text-decoration:none}button{font
 .artist-card__tag{color:var(--accent);font-size:.8rem;text-transform:uppercase;letter-spacing:.16em}
 .artist-card__bio{margin:0;color:var(--muted);line-height:1.6;font-size:.98rem}
 .artist-card__links{display:flex;gap:12px;flex-wrap:wrap}
-.artist-chip{padding:9px 12px;border:1px solid rgba(255,255,255,.12);text-transform:uppercase;font-size:.76rem;letter-spacing:.08em;background:rgba(255,255,255,.03)}
+.artist-chip{padding:9px 12px;border:1px solid rgba(255,255,255,.12);text-transform:uppercase;font-size:.76rem;letter-spacing:.08em;background:rgba(255,255,255,.03);color:var(--text)}
 .release-showcase{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
 .purchase-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 .release-card{background:linear-gradient(180deg, rgba(9,17,28,.88), rgba(4,8,14,.96));border:1px solid var(--line);overflow:hidden;box-shadow:0 16px 40px rgba(0,0,0,.22)}
