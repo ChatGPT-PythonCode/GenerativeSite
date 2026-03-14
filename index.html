@@ -4,14 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Generative Records</title>
-  <meta name="description" content="Generative Records — featured artists, releases, and live Blogger-powered posts." />
+  <meta name="description" content="Generative Records — artists, releases, blog posts, and purchase links." />
   <meta name="theme-color" content="#04070d" />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="shortcut icon" href="favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=11" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
@@ -27,21 +27,34 @@
         <a href="#artists">Artists</a>
         <a href="#releases">Releases</a>
         <a href="#news">News</a>
-        <a href="#process">Purchase Now</a>
-        
+        <a href="#purchase">Purchase Now</a>
       </nav>
     </div>
   </header>
-  
-<center><div data-type="podcastsPlayer" data-publicToken="d3729a5b-38c6-4249-bfb4-844b29a0be0c" data-theme="dark" data-color="e81e4d" data-channelId="a14c93f5-05d4-443a-bca5-a706559ccb5e" data-rendered="false" class="cstrEmbed"><a href="https://www.caster.fm">Caster FM</a> <a href="https://www.caster.fm">Stream Hosting</a> <a href="https://www.caster.fm">for Generative Radio</a></div><script src="//cdn.cloud.caster.fm//widgets/embed.js"></script></center>
-    
-  </script>
+
   <main>
     <section class="panel panel-home" id="home">
       <div class="container">
+
+        <section class="radio-bar" aria-label="Live radio">
+          <div class="radio-bar__inner">
+            <div class="radio-bar__copy">
+              <p class="radio-bar__eyebrow">Live Radio</p>
+              <h2 class="radio-bar__title">Generative Records Radio</h2>
+            </div>
+            <div class="radio-bar__embed">
+              <div data-type="newStreamPlayer" data-publicToken="d3729a5b-38c6-4249-bfb4-844b29a0be0c" data-theme="light" data-color="e81e4d" data-channelId="" data-rendered="false" class="cstrEmbed">
+                <a href="https://www.caster.fm">Shoutcast Hosting</a>
+                <a href="https://www.caster.fm">Stream Hosting</a>
+                <a href="https://www.caster.fm">Radio Server Hosting</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <div class="hero-grid">
           <article class="feature-card">
-            <img class="feature-image" src="https://raw.githubusercontent.com/ChatGPT-PythonCode/GenerativeSite/refs/heads/main/assets/atrisk.png" alt="ATRISK featured artwork" />
+            <img class="feature-image" src="assets/atrisk.svg" alt="ATRISK featured artwork" />
             <div class="feature-copy">
               <h1>ATRISK</h1>
               <p class="feature-meta"><strong>ATRISK</strong> — <strong>Do You Believe In Ghosts</strong></p>
@@ -54,7 +67,7 @@
           </article>
 
           <article class="feature-card">
-            <img class="feature-image" src="https://raw.githubusercontent.com/ChatGPT-PythonCode/GenerativeSite/refs/heads/main/assets/The%20Pixelated.png" alt="The Pixelated featured artwork" />
+            <img class="feature-image" src="assets/the-pixelated.svg" alt="The Pixelated featured artwork" />
             <div class="feature-copy">
               <h1>THE PIXELATED</h1>
               <p class="feature-meta"><strong>THE PIXELATED</strong> — <strong>Mindscape ft Koding</strong></p>
@@ -105,15 +118,15 @@
       </div>
     </section>
 
-    <section class="panel" id="process">
+    <section class="panel" id="purchase">
       <div class="container">
         <div class="section-head">
           <h2>Purchase Now</h2>
-          <p>Open release pages to listen, buy, and browse platform links without leaving the site flow.</p>
+          <p>Open release pages in a new tab for listening, platform links, and purchase options.</p>
         </div>
-        <div class="release-showcase">
+        <div class="release-showcase purchase-grid">
           <article class="release-card">
-            <img class="release-card__img" src="https://raw.githubusercontent.com/ChatGPT-PythonCode/GenerativeSite/refs/heads/main/assets/The%20Pixelated.png" alt="The Pixelated - The Week" />
+            <img class="release-card__img" src="assets/the-pixelated.svg" alt="The Pixelated - The Week" />
             <div class="release-card__body">
               <h3 class="release-card__artist">THE PIXELATED</h3>
               <p class="release-card__title">The Week</p>
@@ -124,7 +137,7 @@
           </article>
 
           <article class="release-card">
-            <img class="release-card__img" src="https://raw.githubusercontent.com/ChatGPT-PythonCode/GenerativeSite/refs/heads/main/assets/atrisk.png" alt="ATRISK - The Statik Tape" />
+            <img class="release-card__img" src="assets/atrisk.svg" alt="ATRISK - The Statik Tape" />
             <div class="release-card__body">
               <h3 class="release-card__artist">ATRISK</h3>
               <p class="release-card__title">The Statik Tape</p>
@@ -135,7 +148,7 @@
           </article>
 
           <article class="release-card">
-            <img class="release-card__img" src="https://raw.githubusercontent.com/ChatGPT-PythonCode/GenerativeSite/refs/heads/main/assets/atrisk.png" alt="ATRISK - Do You Believe In Ghosts Rough" />
+            <img class="release-card__img" src="assets/atrisk.svg" alt="ATRISK - Do You Believe In Ghosts Rough" />
             <div class="release-card__body">
               <h3 class="release-card__artist">ATRISK</h3>
               <p class="release-card__title">Do You Believe In Ghosts (Rough)</p>
@@ -151,10 +164,10 @@
 
   <div id="playerModal" class="modal" aria-hidden="true">
     <div class="modal-backdrop" data-close-player="1"></div>
-    <div class="modal-panel modal-panel--player" role="dialog" aria-modal="true" aria-label="Media player">
+    <div class="modal-panel modal-panel--player" role="dialog" aria-modal="true" aria-label="Spotify player">
       <button class="modal-close" type="button" data-close-player="1" aria-label="Close player">×</button>
       <p class="modal-eyebrow">Now Playing</p>
-      <h3 id="playerTitle">Player</h3>
+      <h3 id="playerTitle">Spotify Player</h3>
       <iframe id="playerFrame" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
   </div>
@@ -170,6 +183,8 @@
       </div>
     </div>
   </div>
-  <script src="app.js?v=12"></script>
+
+  <script src="//cdn.cloud.caster.fm//widgets/embed.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
