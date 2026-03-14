@@ -4,27 +4,24 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Generative Records</title>
-  <meta name="description" content="Generative Records — featured artists, releases, and Blogger-powered posts." />
+  <meta name="description" content="Generative Records — featured artists, releases, and live Blogger-powered posts." />
   <meta name="theme-color" content="#04070d" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=10" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#home" aria-label="Generative Records home">
-        <div class="brand-text">
-          <span class="brand-top">GENERATIVE</span>
-          <span class="brand-bottom">RECORDS</span>
-        </div>
+        <img class="brand-banner" src="assets/logo-banner.svg" alt="Generative Records" />
       </a>
-
       <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
-
       <nav class="site-nav" id="siteNav">
         <a href="#home" class="active">Home</a>
         <a href="#artists">Artists</a>
@@ -41,26 +38,26 @@
       <div class="container">
         <div class="hero-grid">
           <article class="feature-card">
-            <img class="feature-image" src="https://raw.githubusercontent.com/ChatGPT-PythonCode/GenerativeSite/refs/heads/main/assets/atrisk.png" alt="ATRISK profile artwork" />
+            <img class="feature-image" src="https://raw.githubusercontent.com/ChatGPT-PythonCode/GenerativeSite/refs/heads/main/assets/atrisk.png" alt="ATRISK featured artwork" />
             <div class="feature-copy">
               <h1>ATRISK</h1>
-              <p class="feature-meta"><strong>ATRISK</strong> - Artist Profile</p>
-              <p class="feature-desc">Algorithmic feedback, sonic emergence.</p>
+              <p class="feature-meta"><strong>ATRISK</strong> — <strong>Do You Believe In Ghosts</strong></p>
+              <p class="feature-desc">Below Human Collapse / Do You Believe In Ghosts single.</p>
               <div class="feature-actions">
                 <button class="inline-link" data-player-title="ATRISK" data-player-src="https://open.spotify.com/embed/artist/25bE9kl0BVqNDGd81fcVnw?utm_source=generator">Listen</button>
-                <a class="inline-link" href="https://open.spotify.com/artist/25bE9kl0BVqNDGd81fcVnw" target="_blank" rel="noopener">Artist Profile</a>
+                <a class="inline-link" href="https://open.spotify.com/album/7Axiyo4gpClaJdQQJCRwB2?si=KMpSu3xuR_-OfMGoPMke9Q" target="_blank" rel="noopener">Song Link</a>
               </div>
             </div>
           </article>
 
           <article class="feature-card">
-            <img class="feature-image" src="https://raw.githubusercontent.com/ChatGPT-PythonCode/GenerativeSite/refs/heads/main/assets/The%20Pixelated.png" alt="The Pixelated profile artwork" />
+            <img class="feature-image" src="https://raw.githubusercontent.com/ChatGPT-PythonCode/GenerativeSite/refs/heads/main/assets/The%20Pixelated.png" alt="The Pixelated featured artwork" />
             <div class="feature-copy">
               <h1>THE PIXELATED</h1>
-              <p class="feature-meta"><strong>THE PIXELATED</strong> - Artist Profile</p>
-              <p class="feature-desc">Data-driven resonance, evolving structures.</p>
+              <p class="feature-meta"><strong>THE PIXELATED</strong> — <strong>Mindscape ft Koding</strong></p>
+              <p class="feature-desc">Latest collaborative release spotlighted on the front page.</p>
               <div class="feature-actions">
-                <button class="inline-link" data-player-title="The Pixelated" data-player-src="https://open.spotify.com/embed/artist/5khsaq4VuBxFPtdcVGwCG2?utm_source=generator">Stream</button>
+                <button class="inline-link" data-player-title="The Pixelated" data-player-src="https://open.spotify.com/embed/artist/5khsaq4VuBxFPtdcVGwCG2?utm_source=generator">Listen</button>
                 <a class="inline-link" href="https://open.spotify.com/artist/5khsaq4VuBxFPtdcVGwCG2" target="_blank" rel="noopener">Artist Profile</a>
               </div>
             </div>
@@ -88,7 +85,7 @@
       <div class="container">
         <div class="section-head">
           <h2>Releases</h2>
-          <p>Release artwork now uses the profile photos you provided. Listen opens Spotify artist embeds.</p>
+          <p>Latest release mix updated with Koding, ATRISK, ZTh3T3ch, and The Pixelated.</p>
         </div>
         <div id="releaseShowcase" class="release-showcase"></div>
       </div>
@@ -98,7 +95,7 @@
       <div class="container">
         <div class="section-head">
           <h2>News</h2>
-          <p>Posts pull from freeaudiosounds.blogspot.com. Blog cards use HD images pulled from each blog post's own content.</p>
+          <p>Posts pull directly from freeaudiosounds.blogspot.com. Blog cards use HD images from each blog post's own content.</p>
         </div>
         <div class="status-row"><div id="feedStatus" class="status-badge">Loading latest posts…</div></div>
         <div id="postsGrid" class="posts-grid"></div>
@@ -107,26 +104,41 @@
 
     <section class="panel" id="process">
       <div class="container info-grid">
-        <div class="info-card"><h2>Process</h2><p>GitHub Pages compatible static build with responsive sections, JSONP Blogger loading, HD post images from Blogger content, and popup Spotify embeds.</p></div>
-        <div class="info-card"><h2>Shop</h2><p>Reserved section for merch, downloads, and external storefront links so the top nav matches your mockup structure.</p></div>
+        <div class="info-card">
+          <h2>Process</h2>
+          <p>GitHub Pages compatible static build with responsive sections, JSONP Blogger loading, HD post images from Blogger content, and popup Spotify embeds.</p>
+        </div>
+        <div class="info-card">
+          <h2>Shop</h2>
+          <p>Reserved section for merch, downloads, and external storefront links so the top nav matches your mockup structure.</p>
+        </div>
       </div>
     </section>
 
     <section class="panel" id="shop">
       <div class="container footer-panel">
-        <div class="footer-links left"><a href="#artists">About</a><a href="#news">Contact</a><a href="#process">Generative Processes</a></div>
-        <div class="footer-center"><p>SOUNDS FROM THE UNKNOWN.</p><p>EST. 2024.</p></div>
-        <div class="footer-links right"><span>© GENERATIVE RECORDS</span></div>
+        <div class="footer-links left">
+          <a href="#artists">About</a>
+          <a href="#news">Contact</a>
+          <a href="#process">Generative Processes</a>
+        </div>
+        <div class="footer-center">
+          <p>SOUNDS FROM THE UNKNOWN.</p>
+          <p>EST. 2024.</p>
+        </div>
+        <div class="footer-links right">
+          <span>© GENERATIVE RECORDS</span>
+        </div>
       </div>
     </section>
   </main>
 
   <div id="playerModal" class="modal" aria-hidden="true">
     <div class="modal-backdrop" data-close-player="1"></div>
-    <div class="modal-panel modal-panel--player" role="dialog" aria-modal="true" aria-label="Spotify player">
+    <div class="modal-panel modal-panel--player" role="dialog" aria-modal="true" aria-label="Media player">
       <button class="modal-close" type="button" data-close-player="1" aria-label="Close player">×</button>
       <p class="modal-eyebrow">Now Playing</p>
-      <h3 id="playerTitle">Spotify Player</h3>
+      <h3 id="playerTitle">Player</h3>
       <iframe id="playerFrame" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
   </div>
@@ -143,6 +155,6 @@
     </div>
   </div>
 
-  <script src="app.js"></script>
+  <script src="app.js?v=10"></script>
 </body>
 </html>
