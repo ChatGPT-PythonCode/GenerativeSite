@@ -53,8 +53,23 @@ function buildReleaseShowcase() {
 }
 function openPlayer(title, src) { const modal=document.getElementById("playerModal"); document.getElementById("playerTitle").textContent=title||"Player"; document.getElementById("playerFrame").src=src||""; modal.classList.add("is-open"); modal.setAttribute("aria-hidden","false"); document.body.classList.add("modal-open"); }
 function closePlayer() { const modal=document.getElementById("playerModal"); document.getElementById("playerFrame").src=""; modal.classList.remove("is-open"); modal.setAttribute("aria-hidden","true"); document.body.classList.remove("modal-open"); }
-function openHyper(title, src) { const modal=document.getElementById("hyperModal"); document.getElementById("hyperTitle").textContent=title||"Release Links"; document.getElementById("hyperFrame").src=src||""; modal.classList.add("is-open"); modal.setAttribute("aria-hidden","false"); document.body.classList.add("modal-open"); }
-function closeHyper() { const modal=document.getElementById("hyperModal"); document.getElementById("hyperFrame").src=""; modal.classList.remove("is-open"); modal.setAttribute("aria-hidden","true"); document.body.classList.remove("modal-open"); }
+function openHyper(title, src) {
+  const modal=document.getElementById("hyperModal");
+  document.getElementById("hyperTitle").textContent=title||"Release Links";
+  const btn=document.getElementById("hyperOpenBtn");
+  if (btn) btn.href = src || "#";
+  modal.classList.add("is-open");
+  modal.setAttribute("aria-hidden","false");
+  document.body.classList.add("modal-open");
+}
+function closeHyper() {
+  const modal=document.getElementById("hyperModal");
+  const btn=document.getElementById("hyperOpenBtn");
+  if (btn) btn.href = "#";
+  modal.classList.remove("is-open");
+  modal.setAttribute("aria-hidden","true");
+  document.body.classList.remove("modal-open");
+}
 function openPost(postId, pushUrl=true) { const post=postsById.get(String(postId)); if(!post) return; activePostId=String(postId); document.getElementById("postBody").innerHTML=`<div class="post-reader__meta">${escapeHtml(post.dateText)}</div><h2 class="post-reader__title">${escapeHtml(post.title)}</h2>${post.heroImage ? `<img class="post-reader__img" src="${post.heroImage}" alt="${escapeHtml(post.title)}">` : ""}<div class="post-reader__content">${post.contentHtml}</div>`; if(pushUrl) { const url=new URL(window.location.href); url.searchParams.set("post", activePostId); history.pushState({post:activePostId}, "", url.toString()); } const modal=document.getElementById("postModal"); modal.classList.add("is-open"); modal.setAttribute("aria-hidden","false"); document.body.classList.add("modal-open"); }
 function closePost(updateUrl=true) { const modal=document.getElementById("postModal"); modal.classList.remove("is-open"); modal.setAttribute("aria-hidden","true"); document.body.classList.remove("modal-open"); activePostId=null; if(updateUrl) { const url=new URL(window.location.href); url.searchParams.delete("post"); history.pushState({post:null}, "", url.toString()); } }
 async function copyCurrentPostLink() { const url=window.location.href; try { await navigator.clipboard.writeText(url); } catch { const ta=document.createElement("textarea"); ta.value=url; document.body.appendChild(ta); ta.select(); document.execCommand("copy"); ta.remove(); } }

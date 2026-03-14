@@ -27,8 +27,8 @@
         <a href="#artists">Artists</a>
         <a href="#releases">Releases</a>
         <a href="#news">News</a>
-        <a href="#process">CD / Process</a>
-        <a href="#shop">Shop</a>
+        <a href="#process">Purchase Now</a>
+        
       </nav>
     </div>
   </header>
@@ -105,8 +105,8 @@
     <section class="panel" id="process">
       <div class="container">
         <div class="section-head">
-          <h2>CD / Process</h2>
-          <p>Open HyperFollow pages in a clean popup to listen, buy, and browse platform links without leaving the site.</p>
+          <h2>Purchase Now</h2>
+          <p>Open release pages to listen, buy, and browse platform links without leaving the site flow.</p>
         </div>
         <div class="release-showcase">
           <article class="release-card">
@@ -144,23 +144,6 @@
         </div>
       </div>
     </section>
-
-    <section class="panel" id="shop">
-      <div class="container footer-panel">
-        <div class="footer-links left">
-          <a href="#artists">About</a>
-          <a href="#news">Contact</a>
-          <a href="#process">Generative Processes</a>
-        </div>
-        <div class="footer-center">
-          <p>SOUNDS FROM THE UNKNOWN.</p>
-          <p>EST. 2024.</p>
-        </div>
-        <div class="footer-links right">
-          <span>© GENERATIVE RECORDS</span>
-        </div>
-      </div>
-    </section>
   </main>
 
   <div id="playerModal" class="modal" aria-hidden="true">
@@ -187,11 +170,15 @@
 
   <div id="hyperModal" class="modal" aria-hidden="true">
     <div class="modal-backdrop" data-close-hyper="1"></div>
-    <div class="modal-panel modal-panel--post" role="dialog" aria-modal="true" aria-label="HyperFollow">
+    <div class="modal-panel modal-panel--player" role="dialog" aria-modal="true" aria-label="HyperFollow">
       <button class="modal-close" type="button" data-close-hyper="1" aria-label="Close HyperFollow">×</button>
       <p class="modal-eyebrow">HyperFollow</p>
       <h3 id="hyperTitle" style="margin:0 0 14px;font-size:1.6rem;text-transform:uppercase">Release Links</h3>
-      <iframe id="hyperFrame" style="width:100%;height:76svh;border:0;background:#fff" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <p style="margin:0 0 18px;color:#b8c1cf;line-height:1.6">This release page opens in a separate window because DistroKid blocks site embedding.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a id="hyperOpenBtn" class="reader-btn" href="#" target="_blank" rel="noopener">Open HyperFollow</a>
+        <button class="reader-btn" type="button" data-close-hyper="1">Close</button>
+      </div>
     </div>
   </div>
 
