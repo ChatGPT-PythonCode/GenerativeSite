@@ -126,20 +126,30 @@ function buildReleaseThumbs() {
 function buildReleaseShowcase() {
   const wrap = document.getElementById("releaseShowcase");
   wrap.innerHTML = "";
+
   releases.forEach(r => {
-    const primary = r.playerSrc
-      ? `<button class="inline-link inline-link--listen" data-player-title="${escapeHtml(r.playerTitle)}" data-player-src="${escapeHtml(r.playerSrc)}">Listen</button>`
-      : `<a class="inline-link" href="${r.externalUrl}" target="_blank" rel="noopener">${escapeHtml(r.actionLabel || "Open")}</a>`;
-    const secondary = r.externalUrl
-      ? `<a class="inline-link" href="${r.externalUrl}" target="_blank" rel="noopener">${escapeHtml(r.actionLabel || "Open")}</a>`
-      : "";
-    wrap.appendChild(el("article","release-card",
+    const actions = [];
+
+    if (r.playerSrc) {
+      actions.push(
+        `<button class="inline-link inline-link--listen" data-player-title="${escapeHtml(r.playerTitle)}" data-player-src="${escapeHtml(r.playerSrc)}">Listen</button>`
+      );
+    }
+
+    if (r.externalUrl) {
+      actions.push(
+        `<a class="inline-link" href="${r.externalUrl}" target="_blank" rel="noopener">${escapeHtml(r.actionLabel || "Open")}</a>`
+      );
+    }
+
+    wrap.appendChild(el("article", "release-card",
       `<img class="release-card__img" src="${r.image}" alt="${escapeHtml(r.artist)} ${escapeHtml(r.title)}" />
        <div class="release-card__body">
          <h3 class="release-card__artist">${escapeHtml(r.artist)}</h3>
          <p class="release-card__title">${escapeHtml(r.title)}</p>
-         <div class="release-card__actions">${primary}${secondary}</div>
-       </div>`));
+         <div class="release-card__actions">${actions.join("")}</div>
+       </div>`
+    ));
   });
 }
 
