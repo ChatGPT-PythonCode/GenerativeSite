@@ -9,3 +9,7 @@ This build includes:
   - ATRISK — Do You Believe In Ghosts (Single)
   - ZTh3T3ch — Red Dawn
   - The Pixelated — Mindscape ft Koding
+- CD / Process section now opens these HyperFollow pages in a popup modal:
+  - The Pixelated — The Week
+  - ATRISK — The Statik Tape
+  - ATRISK — Do You Believe In Ghosts (Rough)
