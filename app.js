@@ -1,14 +1,14 @@
 
 const artists = [
   {name:"ATRISK",tag:"Featured artist",bio:"Below Human Collapse / Do You Believe In Ghosts single.",image:"assets/atrisk.svg",spotifyProfile:"https://open.spotify.com/artist/25bE9kl0BVqNDGd81fcVnw",embedSrc:"https://open.spotify.com/embed/artist/25bE9kl0BVqNDGd81fcVnw?utm_source=generator"},
-  {name:"THE PIXELATED",tag:"Featured artist",bio:"Mindscape ft Koding and other digital-forward releases.",image:"assets/the-pixelated.svg",spotifyProfile:"https://open.spotify.com/artist/5khsaq4VuBxFPtdcVGwCG2",embedSrc:"https://open.spotify.com/embed/artist/5khsaq4VuBxFPtdcVGwCG2?utm_source=generator"},
-  {name:"ZTh3T3ch",tag:"Artist",bio:"Red Dawn and machine-memory signal work.",image:"assets/zth3t3ch.svg",spotifyProfile:"https://open.spotify.com/artist/5fKDHygtaXB9a6DKXXi9e0",embedSrc:"https://open.spotify.com/embed/artist/5fKDHygtaXB9a6DKXXi9e0?utm_source=generator"},
-  {name:"Koding",tag:"Artist",bio:"Boss Run and high-energy visual-forward releases.",image:"assets/koding.svg",spotifyProfile:"",videoUrl:"https://www.youtube.com/shorts/GvpuQk7OyTY"}
+  {name:"THE PIXELATED",tag:"Featured artist",bio:"The mega group of Generative Records. Filled with folk music, rap, rock and more.",image:"assets/the-pixelated.png",spotifyProfile:"https://open.spotify.com/artist/5khsaq4VuBxFPtdcVGwCG2",embedSrc:"https://open.spotify.com/embed/artist/5khsaq4VuBxFPtdcVGwCG2?utm_source=generator"},
+  {name:"ZTh3T3ch",tag:"Artist",bio:"Red Dawn and machine-memory signal work.",image:"assets/zth3t3ch.jpg",spotifyProfile:"https://open.spotify.com/artist/5fKDHygtaXB9a6DKXXi9e0",embedSrc:"https://open.spotify.com/embed/artist/5fKDHygtaXB9a6DKXXi9e0?utm_source=generator"},
+  {name:"Koding",tag:"Artist",bio:"Music for retro video games..",image:"assets/koding.jpg",spotifyProfile:"",videoUrl:"https://www.youtube.com/shorts/GvpuQk7OyTY"}
 ];
 
 const releases = [
   {artist:"Koding",title:"Boss Run",image:"assets/koding.svg",externalUrl:"https://www.youtube.com/shorts/GvpuQk7OyTY",actionLabel:"Watch"},
-  {artist:"ATRISK",title:"Do You Believe In Ghosts (Single)",image:"assets/atrisk.svg",externalUrl:"https://open.spotify.com/album/7Axiyo4gpClaJdQQJCRwB2?si=KMpSu3xuR_-OfMGoPMke9Q",actionLabel:"Song Link",playerTitle:"ATRISK",playerSrc:"https://open.spotify.com/embed/artist/25bE9kl0BVqNDGd81fcVnw?utm_source=generator"},
+  {artist:"ATRISK",title:"Do You Believe In Ghosts (Single)",image:"assets/atrisk.png",externalUrl:"https://open.spotify.com/album/7Axiyo4gpClaJdQQJCRwB2?si=KMpSu3xuR_-OfMGoPMke9Q",actionLabel:"Song Link",playerTitle:"ATRISK",playerSrc:"https://open.spotify.com/embed/artist/25bE9kl0BVqNDGd81fcVnw?utm_source=generator"},
   {artist:"ZTh3T3ch",title:"Red Dawn",image:"assets/zth3t3ch.svg",externalUrl:"https://open.spotify.com/track/3vkyp3hFRarSVRfAWiLbme?si=9dd59e4739f14a70",actionLabel:"Open Track",playerTitle:"ZTh3T3ch",playerSrc:"https://open.spotify.com/embed/artist/5fKDHygtaXB9a6DKXXi9e0?utm_source=generator"},
   {artist:"THE PIXELATED",title:"Mindscape ft Koding",image:"assets/the-pixelated.svg",externalUrl:"https://open.spotify.com/track/4rFOL6X9Qu2lOuqKz5hfWw?si=22058b0b8f394ce0",actionLabel:"Open Track",playerTitle:"The Pixelated",playerSrc:"https://open.spotify.com/embed/artist/5khsaq4VuBxFPtdcVGwCG2?utm_source=generator"}
 ];
