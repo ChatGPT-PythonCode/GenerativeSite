@@ -3,10 +3,10 @@ const artists = [
   {
     name: "ATRISK",
     tag: "Featured artist",
-    bio: "Glitched silhouettes, algorithmic pressure, recursive machine noise, and late-night signal collapse.",
-    image: "assets/thumb-1.jpg",
+    bio: "The demon that hides inside all of us.",
+    image: "assets/atrisk.png",
     links: [
-      { label: "Listen", type: "player", title: "ATRISK — Recursion", src: "https://open.spotify.com/embed/album/4GzM8r8M8ExampleA?utm_source=generator" },
+      { label: "Listen", type: "player", title: "ATRISK — Below Human Collapse", src: "https://open.spotify.com/artist/25bE9kl0BVqNDGd81fcVnw" },
       { label: "Release Posts", type: "anchor", href: "#news" }
     ]
   },
@@ -14,9 +14,9 @@ const artists = [
     name: "THE PIXELS",
     tag: "Featured artist",
     bio: "Machine pop, luminous structures, synthetic hooks, and digital bodies emerging from signal.",
-    image: "assets/thumb-5.jpg",
+    image: "assets/The%20Pixelated.png",
     links: [
-      { label: "Stream", type: "player", title: "The Pixels — Synthesis", src: "https://open.spotify.com/embed/album/3PxL8s9R9ExampleB?utm_source=generator" },
+      { label: "Stream", type: "player", title: "The Pixels — The Week", src: "https://open.spotify.com/artist/5khsaq4VuBxFPtdcVGwCG2" },
       { label: "Release Posts", type: "anchor", href: "#news" }
     ]
   },
@@ -26,36 +26,33 @@ const artists = [
     bio: "Code-bent textures, synthetic rhythm design, and harsh soft-focus electronics.",
     image: "assets/koding.jpg",
     links: [
-      { label: "Posts", type: "anchor", href: "#news" }
+      { label: "Spotify", type: "anchor", href: "https://open.spotify.com/artist/1yNO2ahEFQU7HlsS3dPucq" }
     ]
   },
   {
     name: "ZTh3T3ch",
     tag: "Artist",
-    bio: "Corrupted process music, neon drift, and broken machine memory set to pulse.",
-    image: "assets/zth3t3ch.jpg",
+    bio: "Instrumentals from the heart.",
+    image: "assets/ZTh3T3ch.png",
     links: [
-      { label: "Posts", type: "anchor", href: "#news" }
+      { label: "Spotify", type: "anchor", href: "https://open.spotify.com/artist/5fKDHygtaXB9a6DKXXi9e0" }
     ]
   },
   {
-    name: "Zilla",
+    name: "LulsMusic",
     tag: "Artist",
-    bio: "Darkwave circuitry, blown-out digital pressure, and collapse-ready beat architecture.",
-    image: "assets/zilla.jpg",
+    bio: "Video Game Music.",
+    image: "https://yt3.googleusercontent.com/4QgvGUtljS2UmcAo9uZddYjrA1bg0ffCEIPqcN4xOHabW08kAOMysa4xvOkZhtjJRyMOmoyt=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
     links: [
-      { label: "Posts", type: "anchor", href: "#news" }
+      { label: "Youtube", type: "anchor", href: "https://www.youtube.com/@LulsRecords" }
     ]
   }
 ];
 
 const releases = [
-  { artist: "atrisk", title: "recursion", image: "assets/thumb-1.jpg", hero: true, playerTitle: "ATRISK — Recursion", playerSrc: "https://open.spotify.com/embed/album/4GzM8r8M8ExampleA?utm_source=generator" },
-  { artist: "atrisk", title: "generative form", image: "assets/thumb-2.jpg" },
-  { artist: "the pixels", title: "algorithmic bloom", image: "assets/thumb-3.jpg" },
-  { artist: "the pixels", title: "signal synthesis", image: "assets/thumb-4.jpg", hero: true, playerTitle: "The Pixels — Synthesis", playerSrc: "https://open.spotify.com/embed/album/3PxL8s9R9ExampleB?utm_source=generator" },
-  { artist: "the pixels", title: "electric bodies", image: "assets/thumb-5.jpg" },
-  { artist: "the pixels", title: "resonant mesh", image: "assets/thumb-6.jpg" }
+  { artist: "atRisk", title: "Do You Believe In Ghosts", image: "assets/atRisk.png", hero: true, playerTitle: "ATRISK — Below Human Collapse", playerSrc: "https://open.spotify.com/album/7Axiyo4gpClaJdQQJCRwB2" },
+  { artist: "The Pixelated", title: "Mindscape", image: "https://yt3.googleusercontent.com/7H0PeaEgwQte3yxAbnddDi33fQlApzu-McCA_BBNVnAvlLzxUaqDNNpHFxkw9kKWSqGxjzdASJE=s160-c-k-c0x00ffffff-no-rj", hero: true, playerTitle: "The Pixelated — Mindscape", playerSrc: "https://open.spotify.com/track/4rFOL6X9Qu2lOuqKz5hfWw" },
+ 
 ];
 
 const FEED_URL = "https://freeaudiosounds.blogspot.com/feeds/posts/default?alt=json-in-script&max-results=9&callback=renderGenerativeRecordsPosts";
