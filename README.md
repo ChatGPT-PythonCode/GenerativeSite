@@ -1,19 +1,13 @@
-Generative Records — GitHub Pages build
+Generative Records website
 
-What changed in this reviewed build:
-- Layout rebuilt to match the supplied reference more closely
-- Full-screen panels
-- Mobile nav + responsive layout
-- Popup Spotify player modal instead of embedded players on page
-- Blogger posts use JSONP so they can load on GitHub Pages without a backend
-- Blogger posts open in an in-site modal reader, similar to the LULS modal pattern
+Updated in this build:
+- Removed the "Open Source" link from blog post cards
+- Added Spotify artist embeds for ATRISK, THE PIXELATED, and ZTh3T3ch
+- Clicking artist names or artist profile buttons opens the Spotify artist profiles
+- Listen buttons open Spotify artist embed popups
+- Release photos now use the artist profile photos you provided
+- Blog cards use HD images pulled from each blog post's content
+- GitHub Pages compatible Blogger JSONP feed loading
 
-Important:
-1. Replace the placeholder Spotify embed URLs in index.html / app.js with your real album or track embed URLs.
-2. Replace artwork in assets/ if you want custom covers or artist images.
-3. Blogger feed is set to:
-   https://freeaudiosounds.blogspot.com/feeds/posts/default?alt=json-in-script&max-results=9&callback=renderGenerativeRecordsPosts
-
-Deploy:
-- Upload contents to a GitHub repository
-- Enable GitHub Pages from the main branch
+Feed:
+https://freeaudiosounds.blogspot.com/feeds/posts/default?alt=json-in-script&max-results=9&callback=renderGenerativeRecordsPosts
